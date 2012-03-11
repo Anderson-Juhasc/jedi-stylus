@@ -1,0 +1,110 @@
+/* Positioning */
+// position
+pos($value)
+	if $value == s
+		position static
+	else if $value == a
+		position absolute
+	else if $value == r
+		position relative
+	else if $value == f
+		position fixed
+
+// top
+t($value = auto)
+	top $value
+
+// right
+r($value = auto)
+	right $value
+
+// bottom
+b($value = auto)
+	bottom $value
+
+// left
+l($value = auto)
+	left $value
+
+// z-index
+z($value = auto)
+	z-index $value
+
+/* Box behavior and properties */
+// float
+fl($value)
+	if $value == n
+		float none
+	else if $value == l
+		float left
+	else if $value == r
+		float right
+
+// clear
+cl($value)
+	if $value == n
+		clear none
+	else if $value == l
+		clear left
+	else if $value == r
+		clear right
+	else if $value == b
+		clear both
+
+// display
+d($value)
+	if $value == n
+		display none
+	else if $value == b
+		display block
+	else if $value == i
+		display inline
+	else if $value == ib
+		display -moz-inline-stack
+		display inline-block
+		zoom 1
+		*display inline
+	else if $value == mib
+		display -moz-inline-box
+	else if $value == mis
+		display -moz-inline-stack
+	else if $value == li
+		display list-item
+	else if $value == ri
+		display run-in
+	else if $value == cp
+		display compact
+	else if $value == tb
+		display table
+	else if $value == itb
+		display inline-table
+	else if $value == tbcp
+		display table-caption
+	else if $value == tbcl
+		display table-column
+	else if $value == tbclg
+		display table-column-group
+	else if $value == tbhg
+		display table-header-group
+	else if $value == tbfg
+		display table-footer-group
+	else if $value == tbr
+		display table-row
+	else if $value == tbrg
+		display table-row-group
+	else if $value == tbc
+		display table-cell
+
+// visibility
+v($value)
+	if $value == v
+		visibility visible
+	else if $value == h
+		visibility hidden
+	else if $value == c
+		visibility collapse
+
+// Tests
+
+div
+	v c
