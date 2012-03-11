@@ -1,2 +1,4 @@
-div{visibility:collapse}
+div{position:relative;margin:5px 5px 0 10px;float:right;box-sizing:content-box;}
+div p{margin:0 5px 0 0;padding:40px 0;}
+div p:hover{margin:0 auto;display:block}
 

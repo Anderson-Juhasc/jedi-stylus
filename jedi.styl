@@ -104,7 +104,104 @@ v($value)
 	else if $value == c
 		visibility collapse
 
+// overflow
+ov($value)
+	if $value == v
+		overflow visible
+	else if $value == h
+		overflow hidden
+	else if $value == s
+		overflow scroll
+	else if $value == a
+		overflow auto
+
+// overflow-x
+ovx($value)
+	if $value == v
+		overflow-x visible
+	else if $value == h
+		overflow-x hidden
+	else if $value == s
+		overflow-x scroll
+	else if $value == a
+		overflow-x auto
+
+// overflow-y
+ovy($value)
+	if $value == v
+		overflow-y visible
+	else if $value == h
+		overflow-y hidden
+	else if $value == s
+		overflow-y scroll
+	else if $value == a
+		overflow-y auto
+
+// overflow-style
+ovs($value)
+	if $value == a
+		overflow-style auto
+	else if $value == s
+		overflow-style scrollbar
+	else if $value == p
+		overflow-style panner
+	else if $value == m
+		overflow-style move
+	else if $value == mq
+		overflow-style marquee
+
+// zoom
+zoo()
+	zoom 1
+
+// clip
+cp($value)
+	if $value == a
+		clip auto
+	/*
+	pendente
+	else if $value == r
+		clip:rect();*/
+
+// box-sizing
+bxz($value)
+	if $value == cb
+		box-sizing content-box
+	else if $value == bb
+		box-sizing border-box
+
+// box-shadow
+bxsh($value)
+	if $value == n
+		box-shadow:none;
+
+/* Sizing */
+
+// margin
+mar()
+	if arguments == a
+		margin:auto;
+	if arguments == c
+		margin:0 auto;
+	else
+		margin:arguments;
+
+// padding
+pad()
+	padding:arguments;
+
 // Tests
 
 div
-	v c
+	pos r
+	mar 5px 5px 0 10px
+	fl r
+	bxz cb
+
+	p
+		mar 0 5px 0 0
+		pad 40px 0
+
+		&:hover
+			mar 0 auto
+			d b
